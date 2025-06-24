@@ -12,9 +12,9 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: registerDB
-      MYSQL_USER: user
-      MYSQL_PASSWORD: userpass
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
     volumes:
       - ./mysql/registerDB.sql:/docker-entrypoint-initdb.d/registerDB.sql
